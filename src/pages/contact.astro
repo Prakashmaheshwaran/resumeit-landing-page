@@ -391,10 +391,18 @@ import Footer from '../components/Footer.astro';
 </div>
 
 <script>
+// Declare global functions on window object with proper types
+declare global {
+  interface Window {
+    hideSuccessModal: () => void;
+    showSuccessModal: () => void;
+  }
+}
+
 // Define functions in global scope BEFORE DOMContentLoaded
-window.hideSuccessModal = function() {
+(window as any).hideSuccessModal = function() {
   console.log('hideSuccessModal called');
-  const modal = document.getElementById('success-modal');
+  const modal = document.getElementById('success-modal') as HTMLElement | null;
   console.log('Modal found:', modal);
 
   if (modal) {
@@ -408,9 +416,9 @@ window.hideSuccessModal = function() {
   }
 };
 
-window.showSuccessModal = function() {
+(window as any).showSuccessModal = function() {
   console.log('showSuccessModal called');
-  const modal = document.getElementById('success-modal');
+  const modal = document.getElementById('success-modal') as HTMLElement | null;
   console.log('Modal found for show:', modal);
 
   if (modal) {
@@ -424,46 +432,48 @@ window.showSuccessModal = function() {
 
 // Also define as regular functions for compatibility
 function hideSuccessModal() {
-  window.hideSuccessModal();
+  (window as any).hideSuccessModal();
 }
 
 function showSuccessModal() {
-  window.showSuccessModal();
+  (window as any).showSuccessModal();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, functions available:', typeof hideSuccessModal, typeof showSuccessModal);
 
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
 
   if (form) {
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
 
-      const submitButton = form.querySelector('button[type="submit"]');
-      const originalText = submitButton.textContent;
+      const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      const originalText = submitButton?.textContent || 'Submit';
 
-      // Show loading state
-      submitButton.textContent = 'Sending...';
-      submitButton.disabled = true;
+      if (submitButton) {
+        // Show loading state
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
 
-      try {
-        // Simulate sending message
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+          // Simulate sending message
+          await new Promise(resolve => setTimeout(resolve, 1500));
 
-        // Show success modal
-        showSuccessModal();
+          // Show success modal
+          showSuccessModal();
 
-        // Reset form
-        form.reset();
+          // Reset form
+          form.reset();
 
-      } catch (error) {
-        console.error('Error:', error);
-        showSuccessModal(); // Still show success
-      } finally {
-        // Restore button state
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
+        } catch (error) {
+          console.error('Error:', error);
+          showSuccessModal(); // Still show success
+        } finally {
+          // Restore button state
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        }
       }
     });
   }

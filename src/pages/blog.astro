@@ -589,8 +589,8 @@ import Footer from '../components/Footer.astro';
     // Force navigation to work by handling clicks directly
     const blogLinks = document.querySelectorAll('a[href^="/blog/"]');
 
-    blogLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+    blogLinks.forEach((link: Element) => {
+      link.addEventListener('click', function(this: HTMLAnchorElement) {
         const href = this.getAttribute('href');
         console.log('Navigating to article:', href);
 

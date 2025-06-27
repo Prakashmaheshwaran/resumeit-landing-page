@@ -147,7 +147,14 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <script>
-  function sendResumeEmail() {
+  // Declare function on global scope to be accessible from onclick
+  declare global {
+    interface Window {
+      sendResumeEmail: () => void;
+    }
+  }
+
+  function sendResumeEmail(): void {
     const subject = encodeURIComponent('Career Interest - ResumeIt.ai');
     const body = encodeURIComponent(`Hi Kash,
 
@@ -159,4 +166,7 @@ Best regards`);
 
     window.location.href = `mailto:kash@resumeit.ai?subject=${subject}&body=${body}`;
   }
+
+  // Make function available globally
+  (window as any).sendResumeEmail = sendResumeEmail;
 </script>
