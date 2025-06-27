@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Careers - ResumeIt.ai" description="Join our team at ResumeIt.ai. Currently no openings available, but we're always looking for great talent.">
+  <main class="min-h-screen relative">
+    <Navigation />
+
+    <!-- Hero Section -->
+    <section class="section-spacing relative pt-32">
+      <div class="max-w-7xl mx-auto container-padding">
+        <div class="text-center">
+          <div class="inline-block glass-card px-4 py-2 rounded-full text-sm font-medium text-blue-400 mb-6">
+            CAREERS
+          </div>
+          <h1 class="text-6xl font-bold text-white mb-8">Join Our Mission</h1>
+          <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-12">
+            Help us revolutionize the way people approach job searching with AI-powered resume optimization technology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Status Section -->
+    <section class="section-spacing relative">
+      <div class="max-w-4xl mx-auto container-padding">
+        <div class="glass-card p-12 rounded-2xl text-center blue-glow">
+          <div class="w-24 h-24 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-content mx-auto mb-8">
+            <svg class="w-12 h-12 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+
+          <h2 class="text-4xl font-bold text-white mb-6">No Current Openings</h2>
+          <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+            We don't have any job openings at the moment, but we're always growing and looking for exceptional talent to join our team.
+          </p>
+
+          <div class="glass-card p-8 rounded-xl mb-8">
+            <h3 class="text-2xl font-bold text-white mb-4">Interested in Future Opportunities?</h3>
+            <p class="text-slate-300 mb-6">
+              We'd love to hear from you! Send us your resume and a note about what role you're interested in.
+              We'll keep your information on file and reach out when the right opportunity becomes available.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+              <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <a
+                href="mailto:kash@resumeit.ai"
+                class="text-blue-400 hover:text-blue-300 font-semibold text-lg transition-colors"
+              >
+                kash@resumeit.ai
+              </a>
+            </div>
+
+            <button
+              class="btn-primary px-8 py-3 font-semibold"
+              onclick="sendResumeEmail()"
+            >
+              Send Us Your Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Look For Section -->
+    <section class="section-spacing relative">
+      <div class="max-w-7xl mx-auto container-padding">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-white mb-8">What We Look For</h2>
+          <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+            When we do have openings, here's what we typically value in potential team members.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Innovation -->
+          <div class="glass-card glass-hover p-8 rounded-xl blue-glow">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Innovation Mindset</h3>
+            <p class="text-slate-300">
+              Passion for creating cutting-edge AI solutions that solve real-world problems in career development.
+            </p>
+          </div>
+
+          <!-- Technical Excellence -->
+          <div class="glass-card glass-hover p-8 rounded-xl blue-glow">
+            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Technical Excellence</h3>
+            <p class="text-slate-300">
+              Strong technical skills in areas like AI/ML, web development, cloud infrastructure, or data science.
+            </p>
+          </div>
+
+          <!-- User Focus -->
+          <div class="glass-card glass-hover p-8 rounded-xl blue-glow">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">User-Centric Approach</h3>
+            <p class="text-slate-300">
+              Deep empathy for job seekers and a commitment to creating products that genuinely help people succeed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay Connected Section -->
+    <section class="section-spacing relative">
+      <div class="max-w-4xl mx-auto container-padding">
+        <div class="glass-card p-12 rounded-2xl text-center blue-glow">
+          <h2 class="text-3xl font-bold text-white mb-6">Stay Connected</h2>
+          <p class="text-lg text-slate-300 mb-8">
+            Follow our journey and be the first to know when new opportunities become available.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/blog" class="btn-glass px-8 py-3 font-semibold">
+              Read Our Blog
+            </a>
+            <a href="/contact" class="btn-primary px-8 py-3 font-semibold">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </main>
+</Layout>
+
+<script>
+  function sendResumeEmail() {
+    const subject = encodeURIComponent('Career Interest - ResumeIt.ai');
+    const body = encodeURIComponent(`Hi Kash,
+
+I'm interested in future career opportunities at ResumeIt.ai.
+
+Please find my resume attached to this email.
+
+Best regards`);
+
+    window.location.href = `mailto:kash@resumeit.ai?subject=${subject}&body=${body}`;
+  }
+</script>

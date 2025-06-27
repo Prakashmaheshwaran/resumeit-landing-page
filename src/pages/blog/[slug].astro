@@ -1,0 +1,764 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+
+// Blog data - In a real application, this would come from a CMS or database
+const blogPosts = {
+  'ats-optimization-guide-2024': {
+    title: 'The Complete Guide to ATS Optimization in 2024',
+    author: 'Sarah Chen',
+    date: 'March 15, 2024',
+    readTime: '8 min read',
+    category: 'ATS Optimization',
+    categoryColor: 'blue',
+    excerpt: 'Learn how to optimize your resume for Applicant Tracking Systems with our comprehensive guide. Discover the latest ATS trends and best practices.',
+    content: `
+      <p>In today's competitive job market, understanding how Applicant Tracking Systems (ATS) work is crucial for job seekers. With over 95% of Fortune 500 companies using ATS to screen resumes, your resume needs to be optimized to pass through these digital gatekeepers.</p>
+
+      <h2>What is an ATS?</h2>
+      <p>An Applicant Tracking System is software used by employers to collect, scan, and rank job applications. These systems help recruiters manage large volumes of applications by automatically filtering resumes based on specific criteria.</p>
+
+      <h2>Key ATS Optimization Strategies</h2>
+
+      <h3>1. Use Standard Formatting</h3>
+      <p>Keep your resume format simple and clean. Avoid complex layouts, graphics, tables, and unusual fonts that can confuse ATS parsers.</p>
+
+      <h3>2. Include Relevant Keywords</h3>
+      <p>Carefully read job descriptions and incorporate relevant keywords and phrases naturally throughout your resume. Focus on:</p>
+      <ul>
+        <li>Technical skills and certifications</li>
+        <li>Industry-specific terminology</li>
+        <li>Job titles and responsibilities</li>
+        <li>Software and tools mentioned in the job posting</li>
+      </ul>
+
+      <h3>3. Optimize Your Resume Sections</h3>
+      <p>Structure your resume with clear, standard headings:</p>
+      <ul>
+        <li>Professional Summary</li>
+        <li>Work Experience</li>
+        <li>Education</li>
+        <li>Skills</li>
+        <li>Certifications</li>
+      </ul>
+
+      <h2>Common ATS Mistakes to Avoid</h2>
+      <p>Many job seekers unknowingly make mistakes that cause their resumes to be rejected by ATS:</p>
+      <ul>
+        <li>Using images or graphics instead of text</li>
+        <li>Saving in unsupported file formats</li>
+        <li>Using unconventional section headings</li>
+        <li>Including contact information in headers or footers</li>
+        <li>Using excessive formatting or special characters</li>
+      </ul>
+
+      <h2>Testing Your ATS Compatibility</h2>
+      <p>Before submitting your resume, test its ATS compatibility by:</p>
+      <ul>
+        <li>Converting to plain text and checking readability</li>
+        <li>Using online ATS scanners</li>
+        <li>Having ResumeIt.ai analyze your resume for ATS optimization</li>
+      </ul>
+
+      <h2>The Future of ATS Technology</h2>
+      <p>As AI technology advances, ATS systems are becoming more sophisticated. They're now better at understanding context and can parse more complex documents. However, following best practices remains essential.</p>
+
+      <h2>Conclusion</h2>
+      <p>ATS optimization is not about gaming the system—it's about ensuring your qualifications are properly communicated to both software and human recruiters. By following these guidelines and using tools like ResumeIt.ai, you can significantly improve your chances of landing interviews.</p>
+
+      <p>Ready to optimize your resume for ATS? Try ResumeIt.ai's advanced ATS scanning technology to ensure your resume gets noticed by the right people.</p>
+    `
+  },
+  'ai-resume-writing': {
+    title: 'How AI is Revolutionizing Resume Writing',
+    author: 'Mike Johnson',
+    date: 'March 12, 2024',
+    readTime: '6 min read',
+    category: 'AI Technology',
+    categoryColor: 'blue',
+    excerpt: 'Explore how artificial intelligence is transforming the way we create and optimize resumes for better job search outcomes.',
+    content: `
+      <p>Artificial Intelligence is revolutionizing every aspect of our professional lives, and resume writing is no exception. Today's AI-powered tools are changing how we approach resume creation, optimization, and job applications.</p>
+
+      <h2>The Evolution of Resume Writing</h2>
+      <p>Resume writing has evolved from simple typed documents to sophisticated, data-driven marketing tools. AI has accelerated this transformation by providing:</p>
+      <ul>
+        <li>Real-time content optimization</li>
+        <li>Industry-specific keyword suggestions</li>
+        <li>ATS compatibility analysis</li>
+        <li>Performance metrics and insights</li>
+      </ul>
+
+      <h2>How AI Enhances Resume Creation</h2>
+
+      <h3>Intelligent Content Suggestions</h3>
+      <p>AI algorithms analyze millions of successful resumes to suggest impactful content, helping you articulate your experience more effectively.</p>
+
+      <h3>Keyword Optimization</h3>
+      <p>AI tools scan job descriptions and identify the most relevant keywords for your industry and role, ensuring your resume speaks the same language as hiring managers.</p>
+
+      <h3>Format Optimization</h3>
+      <p>AI analyzes ATS requirements and suggests formatting that maximizes readability for both software and human reviewers.</p>
+
+      <h2>The ResumeIt.ai Advantage</h2>
+      <p>ResumeIt.ai leverages cutting-edge AI technology to provide:</p>
+      <ul>
+        <li>Real-time job description analysis</li>
+        <li>Instant resume optimization</li>
+        <li>ATS compatibility scoring</li>
+        <li>Industry-specific recommendations</li>
+      </ul>
+
+      <h2>Future of AI in Career Development</h2>
+      <p>As AI technology continues to advance, we can expect even more sophisticated tools that will help professionals at every stage of their career journey.</p>
+
+      <h2>Getting Started with AI Resume Tools</h2>
+      <p>Ready to harness the power of AI for your resume? Start with ResumeIt.ai today and experience the future of resume optimization.</p>
+    `
+  },
+  'resume-mistakes': {
+    title: 'Top 10 Resume Mistakes That Kill Your Chances',
+    author: 'Lisa Wang',
+    date: 'March 10, 2024',
+    readTime: '5 min read',
+    category: 'Career Tips',
+    categoryColor: 'green',
+    excerpt: 'Avoid these common resume mistakes that could be preventing you from landing interviews at your dream companies.',
+    content: `
+      <p>Your resume is often the first impression you make on potential employers. Unfortunately, common mistakes can quickly eliminate you from consideration, no matter how qualified you are.</p>
+
+      <h2>The 10 Most Common Resume Mistakes</h2>
+
+      <h3>1. Typos and Grammatical Errors</h3>
+      <p>Even a single typo can signal carelessness to hiring managers. Always proofread multiple times and consider having others review your resume.</p>
+
+      <h3>2. Generic Resume for Every Application</h3>
+      <p>Sending the same resume to every employer shows lack of effort. Customize your resume for each position and company.</p>
+
+      <h3>3. Unclear Contact Information</h3>
+      <p>Make sure your email, phone number, and LinkedIn profile are current and professional.</p>
+
+      <h3>4. Weak Professional Summary</h3>
+      <p>A generic objective statement adds no value. Write a compelling summary that highlights your unique value proposition.</p>
+
+      <h3>5. Missing Keywords</h3>
+      <p>Failing to include relevant keywords from the job description can result in ATS rejection.</p>
+
+      <h3>6. Poor Formatting</h3>
+      <p>Inconsistent formatting, inappropriate fonts, or cluttered layouts make your resume hard to read.</p>
+
+      <h3>7. Including Irrelevant Information</h3>
+      <p>Focus on relevant experience and skills. Remove outdated or unrelated content.</p>
+
+      <h3>8. No Quantifiable Achievements</h3>
+      <p>Use numbers, percentages, and specific metrics to demonstrate your impact.</p>
+
+      <h3>9. Too Long or Too Short</h3>
+      <p>Most resumes should be 1-2 pages. Include enough detail to be compelling but stay concise.</p>
+
+      <h3>10. Not ATS-Optimized</h3>
+      <p>Many resumes fail to pass through Applicant Tracking Systems due to poor formatting or missing keywords.</p>
+
+      <h2>How to Fix These Mistakes</h2>
+      <p>Use tools like ResumeIt.ai to identify and fix these common issues automatically, ensuring your resume makes it past ATS systems and impresses hiring managers.</p>
+
+      <h2>Take Action Today</h2>
+      <p>Don't let these mistakes sabotage your job search. Start optimizing your resume with ResumeIt.ai and see immediate improvements in your application success rate.</p>
+    `
+  },
+  'tech-resume-tips': {
+    title: 'Industry-Specific Resume Tips for Tech Professionals',
+    author: 'David Rodriguez',
+    date: 'March 8, 2024',
+    readTime: '7 min read',
+    category: 'Tech Careers',
+    categoryColor: 'purple',
+    excerpt: 'Tailored advice for creating standout resumes in the technology sector, from software engineering to product management.',
+    content: `
+      <p>The tech industry has unique requirements when it comes to resumes. Whether you're a software engineer, product manager, or data scientist, your resume needs to showcase both technical skills and business impact.</p>
+
+      <h2>Tech Resume Essentials</h2>
+
+      <h3>Technical Skills Section</h3>
+      <p>Create a dedicated section for your technical skills, organized by category:</p>
+      <ul>
+        <li>Programming Languages</li>
+        <li>Frameworks and Libraries</li>
+        <li>Databases</li>
+        <li>Cloud Platforms</li>
+        <li>Development Tools</li>
+      </ul>
+
+      <h3>Project Portfolio</h3>
+      <p>Include 2-3 significant projects that demonstrate your technical abilities and problem-solving skills. For each project, mention:</p>
+      <ul>
+        <li>Technologies used</li>
+        <li>Your specific role and contributions</li>
+        <li>Quantifiable results or impact</li>
+        <li>Link to GitHub or live demo (if applicable)</li>
+      </ul>
+
+      <h2>Role-Specific Tips</h2>
+
+      <h3>Software Engineers</h3>
+      <ul>
+        <li>Highlight programming languages and frameworks</li>
+        <li>Include code quality metrics</li>
+        <li>Mention system design experience</li>
+        <li>Show collaboration with cross-functional teams</li>
+      </ul>
+
+      <h3>Product Managers</h3>
+      <ul>
+        <li>Focus on product outcomes and metrics</li>
+        <li>Highlight user research and data analysis</li>
+        <li>Show stakeholder management experience</li>
+        <li>Include A/B testing and experimentation</li>
+      </ul>
+
+      <h3>Data Scientists</h3>
+      <ul>
+        <li>Emphasize statistical analysis and modeling</li>
+        <li>Include specific algorithms and techniques</li>
+        <li>Show business impact of your analysis</li>
+        <li>Mention data visualization skills</li>
+      </ul>
+
+      <h2>Common Tech Resume Mistakes</h2>
+      <p>Avoid these tech-specific pitfalls:</p>
+      <ul>
+        <li>Listing every technology you've ever touched</li>
+        <li>Focusing only on technical skills without business context</li>
+        <li>Using too much technical jargon</li>
+        <li>Not updating skills with current technologies</li>
+      </ul>
+
+      <h2>Optimizing for Tech Recruiters</h2>
+      <p>Tech recruiters look for specific indicators of success. Use ResumeIt.ai to ensure your resume highlights the right technical keywords and demonstrates measurable impact in technology roles.</p>
+
+      <h2>Stand Out in Tech</h2>
+      <p>Ready to create a tech resume that gets noticed? Let ResumeIt.ai help you optimize your technical resume for maximum impact.</p>
+    `
+  }
+};
+
+// Export getStaticPaths for static generation
+export async function getStaticPaths() {
+  const slugs = [
+    'ats-optimization-guide-2024',
+    'ai-resume-writing',
+    'resume-mistakes',
+    'tech-resume-tips'
+  ];
+
+  return slugs.map(slug => ({
+    params: { slug }
+  }));
+}
+
+// Get the slug from the URL
+const { slug } = Astro.params;
+
+// Get the blog post data
+const post = blogPosts[slug as keyof typeof blogPosts];
+
+// If post doesn't exist, return 404
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+// Generate page title
+const pageTitle = `${post.title} - ResumeIt.ai Blog`;
+---
+
+<Layout title={pageTitle}>
+  <Navigation />
+
+  <!-- Article Header -->
+  <article class="blog-article">
+    <div class="article-container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <div class="breadcrumb-content">
+          <a href="/blog" class="breadcrumb-link">Blog</a>
+          <span class="breadcrumb-separator">→</span>
+          <span class="breadcrumb-category">{post.category}</span>
+          <span class="breadcrumb-separator">→</span>
+          <span class="breadcrumb-current">{post.title}</span>
+        </div>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <div class="category-badge">
+          <span class={`category-tag category-${post.categoryColor}`}>
+            {post.category}
+          </span>
+        </div>
+
+        <h1 class="article-title">
+          {post.title}
+        </h1>
+
+        <p class="article-excerpt">
+          {post.excerpt}
+        </p>
+
+        <!-- Author Info -->
+        <div class="author-info">
+          <div class="author-avatar">
+            <div class="avatar-initials">
+              {post.author.split(' ').map(name => name[0]).join('')}
+            </div>
+            <span class="author-name">{post.author}</span>
+          </div>
+          <div class="article-meta">
+            <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <span>{post.date}</span>
+          </div>
+          <div class="article-meta">
+            <svg class="meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>{post.readTime}</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Article Content -->
+      <div class="article-content-wrapper">
+        <div class="article-content" set:html={post.content} />
+      </div>
+
+      <!-- Call to Action -->
+      <div class="article-cta">
+        <h3 class="cta-title">Ready to Optimize Your Resume?</h3>
+        <p class="cta-description">Use ResumeIt.ai to implement these strategies and get your resume noticed by top employers.</p>
+        <div class="cta-buttons">
+          <button class="btn-primary" onclick="window.open('https://app.resumeit.ai', '_blank')">
+            Get Started Free
+          </button>
+          <button class="btn-secondary" onclick="window.open('https://calendly.com/resume-ai/demo', '_blank')">
+            Book a Demo
+          </button>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <section class="related-articles">
+        <h3 class="related-title">Related Articles</h3>
+        <div class="related-grid">
+          <a href="/blog/resume-mistakes" class="related-card">
+            <h4 class="related-card-title">Top 10 Resume Mistakes</h4>
+            <p class="related-card-description">Avoid common mistakes that kill your chances</p>
+          </a>
+          <a href="/blog/tech-resume-tips" class="related-card">
+            <h4 class="related-card-title">Tech Resume Tips</h4>
+            <p class="related-card-description">Industry-specific advice for tech professionals</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Back to Blog -->
+      <div class="back-to-blog">
+        <a href="/blog" class="back-link">
+          <svg class="back-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          Back to Blog
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <Footer />
+</Layout>
+
+<style>
+  .blog-article {
+    padding-top: 140px;
+    min-height: 100vh;
+    background: rgb(13, 15, 26);
+    color: white;
+  }
+
+  .article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    margin-bottom: 32px;
+  }
+
+  .breadcrumb-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .breadcrumb-link {
+    color: rgb(96, 165, 250);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-separator {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .breadcrumb-category {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .breadcrumb-current {
+    color: white;
+  }
+
+  /* Article Header */
+  .article-header {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .category-badge {
+    margin-bottom: 16px;
+  }
+
+  .category-tag {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .category-blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: rgb(96, 165, 250);
+  }
+
+  .category-green {
+    background: rgba(34, 197, 94, 0.1);
+    color: rgb(34, 197, 94);
+  }
+
+  .category-purple {
+    background: rgba(147, 51, 234, 0.1);
+    color: rgb(147, 51, 234);
+  }
+
+  .article-title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .article-excerpt {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Author Info */
+  .author-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .author-avatar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .avatar-initials {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, rgb(96, 165, 250), rgb(147, 51, 234));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .author-name {
+    color: white;
+    font-weight: 500;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .meta-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Article Content */
+  .article-content-wrapper {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 48px;
+    margin-bottom: 48px;
+  }
+
+  .article-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .article-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin: 40px 0 16px 0;
+    border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+    padding-bottom: 8px;
+  }
+
+  .article-content h2:first-child {
+    margin-top: 0;
+  }
+
+  .article-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin: 32px 0 12px 0;
+  }
+
+  .article-content p {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .article-content ul {
+    margin-bottom: 20px;
+    padding-left: 24px;
+    list-style-type: disc;
+  }
+
+  .article-content li {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .article-content strong {
+    color: white;
+    font-weight: 600;
+  }
+
+  .article-content a {
+    color: rgb(96, 165, 250);
+    text-decoration: underline;
+  }
+
+  .article-content a:hover {
+    color: rgb(147, 51, 234);
+  }
+
+  /* Call to Action */
+  .article-cta {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .cta-description {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 24px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: rgb(59, 130, 246);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background: rgb(37, 99, 235);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Related Articles */
+  .related-articles {
+    margin-bottom: 48px;
+  }
+
+  .related-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .related-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    display: block;
+  }
+
+  .related-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .related-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: white;
+  }
+
+  .related-card-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+  }
+
+  /* Back to Blog */
+  .back-to-blog {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .back-link {
+    color: rgb(96, 165, 250);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .back-link:hover {
+    background: rgba(96, 165, 250, 0.1);
+    border-color: rgba(96, 165, 250, 0.5);
+  }
+
+  .back-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .article-container {
+      padding: 0 16px;
+    }
+
+    .article-title {
+      font-size: 32px;
+    }
+
+    .article-excerpt {
+      font-size: 18px;
+    }
+
+    .article-content-wrapper {
+      padding: 24px;
+    }
+
+    .author-info {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+</style>

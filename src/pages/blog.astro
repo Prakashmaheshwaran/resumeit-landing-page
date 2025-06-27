@@ -1,0 +1,606 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Blog - ResumeIt.ai">
+  <Navigation />
+
+  <!-- Hero Section -->
+  <section class="pb-12 section-spacing relative" style="padding-top: 140px;">
+    <div class="max-w-7xl mx-auto container-padding text-center">
+      <div class="inline-block glass-card px-4 py-2 rounded-full text-sm font-medium text-blue-400 mb-6">
+        INSIGHTS & TIPS
+      </div>
+      <h1 class="text-5xl font-bold text-white mb-6">Resume.ai Blog</h1>
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+        Expert insights, tips, and strategies to help you optimize your resume and accelerate your career growth.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="section-spacing relative">
+    <div class="max-w-7xl mx-auto container-padding">
+      <div class="mb-8">
+        <span class="glass-card px-4 py-2 text-lg font-medium text-blue-400 rounded-full">Featured Article</span>
+      </div>
+
+      <div class="glass-card rounded-2xl overflow-hidden blue-glow">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div class="bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-12 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-white text-4xl font-bold">ATS</span>
+              </div>
+              <span class="glass-card px-3 py-1 text-blue-400 font-medium rounded-full">ATS Optimization</span>
+            </div>
+          </div>
+
+          <div class="p-8 lg:p-12 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold text-white mb-4">
+              The Complete Guide to ATS Optimization in 2024
+            </h2>
+            <p class="text-lg text-slate-300 mb-6">
+              Learn how to optimize your resume for Applicant Tracking Systems with our comprehensive guide. Discover the latest ATS trends and best practices.
+            </p>
+
+            <div class="flex items-center space-x-4 text-sm text-slate-400 mb-6">
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span>Sarah Chen</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z"/>
+                </svg>
+                <span>March 15, 2024</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>8 min read</span>
+              </div>
+            </div>
+
+            <a href="/blog/ats-optimization-guide-2024" class="btn-primary w-fit flex items-center space-x-2 blog-link">
+              <span>Read Full Article</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Published Articles Section -->
+  <section class="section-spacing relative">
+    <div class="max-w-7xl mx-auto container-padding">
+      <h2 class="text-3xl font-bold text-white mb-8 text-center">✅ Published Articles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Article 1: ATS Optimization Guide -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">ATS</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-blue-400 rounded">ATS Optimization</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-white mb-3">
+              ATS Optimization Guide 2024
+            </h3>
+            <p class="text-slate-300 mb-4 text-sm">
+              Complete 8-minute comprehensive guide to optimize your resume.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>8 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 15, 2024</span>
+              <a href="/blog/ats-optimization-guide-2024" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center space-x-1 blog-link">
+                <span>Read Article</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: AI Resume Writing -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">AI</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-blue-400 rounded">AI Technology</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-white mb-3">
+              AI Resume Writing
+            </h3>
+            <p class="text-slate-300 mb-4 text-sm">
+              6-minute article on AI technology transforming resume creation.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>6 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 12, 2024</span>
+              <a href="/blog/ai-resume-writing" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center space-x-1 blog-link">
+                <span>Read Article</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3: Resume Mistakes -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">RM</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-green-400 rounded">Career Tips</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-white mb-3">
+              Resume Mistakes
+            </h3>
+            <p class="text-slate-300 mb-4 text-sm">
+              5-minute career tips article about common resume mistakes.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>5 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 10, 2024</span>
+              <a href="/blog/resume-mistakes" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center space-x-1 blog-link">
+                <span>Read Article</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4: Tech Resume Tips -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">TT</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-purple-400 rounded">Tech Careers</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-white mb-3">
+              Tech Resume Tips
+            </h3>
+            <p class="text-slate-300 mb-4 text-sm">
+              7-minute industry-specific advice for tech professionals.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>7 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 8, 2024</span>
+              <a href="/blog/tech-resume-tips" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center space-x-1 blog-link">
+                <span>Read Article</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Filter -->
+  <section class="py-8 relative">
+    <div class="max-w-7xl mx-auto container-padding">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button class="btn-primary text-sm">All Posts</button>
+        <button class="btn-glass text-sm">ATS Optimization</button>
+        <button class="btn-glass text-sm">AI Technology</button>
+        <button class="btn-glass text-sm">Career Tips</button>
+        <button class="btn-glass text-sm">Tech Careers</button>
+        <button class="btn-glass text-sm">Remote Work</button>
+        <button class="btn-glass text-sm">Career Growth</button>
+        <button class="btn-glass text-sm">Recruitment</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="section-spacing relative">
+    <div class="max-w-7xl mx-auto container-padding">
+      <h2 class="text-3xl font-bold text-white mb-8 text-center">All Blog Articles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Article 1: AI Resume Writing -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">AI</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-blue-400 rounded">AI Technology</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">
+              How AI is Revolutionizing Resume Writing
+            </h3>
+            <p class="text-slate-300 mb-4">
+              Explore how artificial intelligence is transforming the way we create and optimize resumes for better job search outcomes.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span>Mike Johnson</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>6 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 12, 2024</span>
+              <span class="text-slate-500 text-sm font-medium">Coming Soon</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: Resume Mistakes -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">CT</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-green-400 rounded">Career Tips</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">
+              Top 10 Resume Mistakes That Kill Your Chances
+            </h3>
+            <p class="text-slate-300 mb-4">
+              Avoid these common resume mistakes that could be preventing you from landing interviews at your dream companies.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span>Lisa Wang</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>5 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 10, 2024</span>
+              <span class="text-slate-500 text-sm font-medium">Coming Soon</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3: Tech Resume Tips -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">TC</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-purple-400 rounded">Tech Careers</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">
+              Industry-Specific Resume Tips for Tech Professionals
+            </h3>
+            <p class="text-slate-300 mb-4">
+              Tailored advice for creating standout resumes in the technology sector, from software engineering to product management.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span>David Rodriguez</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>7 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 8, 2024</span>
+              <span class="text-slate-500 text-sm font-medium">Coming Soon</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- More sample posts for demonstration -->
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">R</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-yellow-400 rounded">Recruitment</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">
+              The Psychology Behind Recruiter Resume Screening
+            </h3>
+            <p class="text-slate-300 mb-4">
+              Understand what recruiters look for when screening resumes and how to make yours stand out in the pile.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span>Emily Foster</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>4 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 5, 2024</span>
+              <span class="text-slate-500 text-sm font-medium">Coming Soon</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">RW</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-teal-400 rounded">Remote Work</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">
+              Remote Work Resume: How to Show Your Virtual Skills
+            </h3>
+            <p class="text-slate-300 mb-4">
+              Learn how to highlight remote work experience and virtual collaboration skills on your resume.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span>Alex Thompson</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>6 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 3, 2024</span>
+              <span class="text-slate-500 text-sm font-medium">Coming Soon</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card glass-hover rounded-xl overflow-hidden blue-glow">
+          <div class="h-48 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <span class="text-white text-xl font-bold">CG</span>
+              </div>
+              <span class="glass-card px-2 py-1 text-xs font-medium text-indigo-400 rounded">Career Growth</span>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-3">
+              Salary Negotiation: Using Your Optimized Resume
+            </h3>
+            <p class="text-slate-300 mb-4">
+              Leverage your ATS-optimized resume to negotiate better salary offers and advance your career faster.
+            </p>
+
+            <div class="flex items-center justify-between text-sm text-slate-400 mb-4">
+              <div class="flex items-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+                <span>Jennifer Lee</span>
+              </div>
+              <div class="flex items-center space-x-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>5 min read</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-slate-400">March 1, 2024</span>
+              <span class="text-slate-500 text-sm font-medium">Coming Soon</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Newsletter Signup -->
+  <section class="section-spacing relative">
+    <div class="max-w-4xl mx-auto container-padding text-center">
+      <div class="glass-card p-12 rounded-2xl blue-glow">
+        <h2 class="text-4xl font-bold text-white mb-4">Stay Updated with Career Insights</h2>
+        <p class="text-xl text-slate-300 mb-8">
+          Get weekly tips, industry trends, and optimization strategies delivered to your inbox
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-4 py-3 glass-card border border-white/10 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+          />
+          <button class="btn-primary px-6 py-3">Subscribe</button>
+        </div>
+
+        <p class="text-sm text-slate-400 mt-4">No spam. Unsubscribe at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Ensure all blog links are clickable */
+  .blog-link {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  /* Debug highlighting for links */
+  .blog-link:hover {
+    background: rgba(96, 165, 250, 0.1) !important;
+    border-radius: 4px;
+  }
+
+  /* Ensure card containers don't block clicks */
+  .glass-card {
+    pointer-events: auto;
+  }
+
+  /* Make sure nothing blocks the links */
+  a[href^="/blog/"] {
+    position: relative;
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  a[href^="/blog/"]:hover {
+    transform: scale(1.05);
+    background: rgba(96, 165, 250, 0.2);
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+</style>
+
+<script>
+  // Ensure navigation works properly
+  document.addEventListener('DOMContentLoaded', function() {
+    // Force navigation to work by handling clicks directly
+    const blogLinks = document.querySelectorAll('a[href^="/blog/"]');
+
+    blogLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        console.log('Navigating to article:', href);
+
+        // Force navigation
+        if (href && href.startsWith('/blog/')) {
+          window.location.href = href;
+        }
+      });
+    });
+
+    console.log('Blog navigation initialized. Found', blogLinks.length, 'article links');
+  });
+</script>

@@ -1,0 +1,277 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Documentation - ResumeIt.ai">
+  <Navigation />
+
+  <div class="docs-page">
+    <div class="container">
+
+      <div class="hero">
+        <div class="badge">Privacy Policy</div>
+        <h1>Privacy Policy</h1>
+        <p>Everything comes under our privacy policy@resumeit.ai</p>
+      </div>
+
+      <div class="quick-start">
+        <h2>Quick Start Guide</h2>
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Install Extension</h3>
+            <p>Add ResumeIt.ai to your browser from the Chrome Web Store</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Create Account</h3>
+            <p>Sign up for free and verify your email address</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Upload Resume</h3>
+            <p>Upload your current resume or create one from scratch</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Optimize</h3>
+            <p>Find a job posting and let our AI optimize your resume</p>
+          </div>
+
+        </div>
+      </div>
+
+      
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  .docs-page {
+    padding-top: 140px;
+    min-height: 100vh;
+    background: rgb(13, 15, 26);
+    color: white;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #60A5FA;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .hero p {
+    font-size: 20px;
+    color: #CBD5E1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .quick-start {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 60px;
+  }
+
+  .quick-start h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .step {
+    text-align: center;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: #3B82F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .step h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    color: #CBD5E1;
+    font-size: 14px;
+  }
+
+  .categories {
+    margin-bottom: 60px;
+  }
+
+  .categories h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .category {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    background: #3B82F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .category h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .category p {
+    color: #CBD5E1;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .category ul {
+    text-align: left;
+    color: #60A5FA;
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .category li {
+    margin-bottom: 8px;
+  }
+
+  .support {
+    text-align: center;
+  }
+
+  .support h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .support > p {
+    color: #CBD5E1;
+    margin-bottom: 40px;
+  }
+
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .support-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .support-icon {
+    width: 50px;
+    height: 50px;
+    background: #3B82F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .support-card h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .support-card p {
+    color: #CBD5E1;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .support-card button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+</style>
